@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Kryvox Arena – Links</title>
+<meta name="description" content="Kryvox Arena: Free Fire aur BGMI custom room tournaments.">
+<meta name="theme-color" content="#02040a">
+<meta property="og:title" content="Kryvox Arena">
+<meta property="og:description" content="Free Fire aur BGMI custom room tournaments. Slot book karo.">
+<link rel="icon" href="/assets/img/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#02040a;--panel:#070d1c;--line:#16305f;--text:#eaf1ff;--muted:#8fa5cc;--hot:#2f7bff;--ice:#6fd3ff;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:600 18px/1.4 Rajdhani,system-ui,sans-serif;
+background-image:radial-gradient(60% 40% at 15% 90%,rgba(47,123,255,.25),transparent 70%),radial-gradient(50% 40% at 85% 10%,rgba(20,60,170,.4),transparent 70%);background-attachment:fixed;
+padding:max(28px,env(safe-area-inset-top,0px)) 20px max(28px,env(safe-area-inset-bottom,0px))}
+main{max-width:460px;margin:0 auto;text-align:center}
+.logo{width:min(62%,240px);aspect-ratio:1;border-radius:50%;border:3px solid var(--hot);box-shadow:0 0 36px rgba(47,123,255,.55);display:block;margin:0 auto 14px;object-fit:cover}
+h1{font:600 34px Teko,Impact,sans-serif;letter-spacing:.04em;margin:0}
+h1 span{color:var(--hot)}
+p.tag{color:var(--muted);margin:4px 0 22px}
+.links{display:grid;gap:14px}
+a.l{display:flex;align-items:center;gap:14px;text-align:left;background:var(--panel);border:2px solid var(--line);border-radius:12px;padding:14px 18px;color:var(--text);text-decoration:none;box-shadow:0 5px 0 var(--line);transition:transform .08s,box-shadow .08s,border-color .15s}
+a.l:hover{border-color:var(--hot)}
+a.l:active{transform:translateY(4px);box-shadow:0 1px 0 var(--line)}
+a.l.main{background:var(--hot);border-color:var(--hot);box-shadow:0 5px 0 #0f2f7a}
+a.l.main:active{box-shadow:0 1px 0 #0f2f7a}
+a.l svg{width:26px;height:26px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+a.l b{display:block;font-size:20px}
+a.l small{display:block;font-weight:500;font-size:15px;color:var(--muted)}
+a.l.main small{color:#d7e5ff}
+:focus-visible{outline:3px solid var(--ice);outline-offset:3px}
+.note{margin:26px 0 0;color:var(--muted);font-size:14px;font-weight:500}
+.badge{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:0 6px;margin-right:6px}
+</style></head><body>
+<main>
+<img class="logo" alt="Kryvox Arena logo" src="/assets/img/logo.jpg">
+<h1>KRYV<span>OX</span> ARENA</h1>
+<p class="tag">Free Fire &amp; BGMI custom room tournaments</p>
+<nav class="links" id="links" aria-label="Links"></nav>
+<p class="note"><span class="badge">18+</span>Payment sirf official link se karo. Admin kabhi OTP ya PIN nahi maangta.</p>
+</main>
+<script>
+// ---- Apni links yahan badlo ("#" ya khaali = button nahi dikhega) ----
+var LINKS={
+  telegram:"https://t.me/+LtHKsvOGA3Y1ZTll",   // jaise https://t.me/yourchannel
+  website:"/home",    // main homepage
+  admin:"#",      // jaise https://t.me/youradmin
+  instagram:"https://instagram.com/kryvoxarena"    // optional, khaali chhodo to nahi dikhega
+};
+// --------------------------------
+var IC={
+ tg:'<svg viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>',
+ web:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>',
+ adm:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>',
+ ig:'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>'};
+var ITEMS=[
+ ["telegram","tg","Telegram join karo","Room ID, results aur announcements","main"],
+ ["website","web","Website","Matches dekho aur slot book karo",""],
+ ["admin","adm","Admin se baat karo","Koi dikkat ho to message karo",""],
+ ["instagram","ig","Instagram","Payout proof aur updates",""]];
+var box=document.getElementById("links");
+ITEMS.forEach(function(it){var u=LINKS[it[0]];if(!u||u==="#")return;
+ var a=document.createElement("a");a.className="l "+it[4];a.href=u;a.target="_blank";a.rel="noopener";
+ a.innerHTML=IC[it[1]]+"<span><b></b><small></small></span>";
+ a.querySelector("b").textContent=it[2];a.querySelector("small").textContent=it[3];box.appendChild(a)});
+</script></body></html>

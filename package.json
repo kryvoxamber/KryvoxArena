@@ -1,0 +1,15 @@
+{
+  "name": "kryvox-arena",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Free Fire & BGMI esports tournament platform (frontend + Supabase backend in one repo)",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/otp.test.ts tests/payments.test.ts tests/templates.test.ts",
+    "db:start": "supabase start",
+    "db:reset": "supabase db reset",
+    "functions:serve": "supabase functions serve --env-file supabase/.env.secrets --no-verify-jwt",
+    "dev:all": "node scripts/dev-all.js"
+  }
+}

@@ -1,0 +1,47 @@
+/* App-level additions. Uses only tokens and patterns from theme.css (the supplied design); no new visual language. */
+.hacts{display:flex;gap:10px;align-items:center}
+.hacts .btn{padding:9px 18px;font-size:18px}
+@media(max-width:720px){.hacts .btn.ghost{display:none}}
+
+/* Layouts for inner pages */
+.layout-player,.layout-admin{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:100vh;position:relative;z-index:1}
+.layout-player #main,.layout-admin #main{min-width:0}
+#sidenav{background:var(--panel);border-right:1px solid var(--line);padding:20px 12px;display:flex;flex-direction:column;gap:4px;position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto}
+#sidenav a{color:var(--text);text-decoration:none;font-weight:700;padding:9px 14px;border-radius:8px;border-left:4px solid transparent}
+#sidenav a:hover{color:var(--hot)}
+#sidenav a.on{background:var(--bg);border-left-color:var(--hot);color:var(--ice)}
+.side-logo{padding:4px 14px 14px}.side-logo small{font:600 14px Rajdhani,sans-serif;color:var(--muted);letter-spacing:.1em}
+.side-exit{margin-top:auto;color:var(--muted)!important}
+.layout-bare #main{min-height:100vh;display:grid;place-items:center}
+@media(max-width:860px){
+  .layout-player,.layout-admin{grid-template-columns:1fr}
+  #sidenav{position:static;height:auto;flex-direction:row;overflow-x:auto;overflow-y:hidden;border-right:0;border-bottom:1px solid var(--line);padding:10px;white-space:nowrap}
+  .side-logo,.side-exit{display:none}
+}
+.stub .empty{margin-top:12px}
+
+/* Forms, tables, cards for app pages (tokens come from theme.css) */
+.page{padding:40px 0}.page h2{margin:0 0 6px}.page .lead{margin:0 0 22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:18px}
+.card h3{margin:0 0 10px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.form{display:grid;gap:14px;max-width:560px}
+.form label{display:grid;gap:6px;font-weight:700}
+.form label small{font-weight:400;color:var(--muted)}
+.form input,.form select,.form textarea,.inp{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:11px 12px;font:500 16px Inter,system-ui,sans-serif;width:100%;box-sizing:border-box}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--hot);outline-offset:1px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.msg{margin:0;min-height:1.4em}.msg.ok{color:#5fe39a}.msg.bad{color:#ff7a7a}
+table.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th,.tbl td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{color:var(--muted);font-weight:700;white-space:nowrap}
+.tblwrap{overflow-x:auto}
+.pill{display:inline-block;padding:2px 10px;border-radius:99px;border:1px solid var(--line);font-size:13px;font-weight:700}
+.pill.ok{color:#5fe39a;border-color:#5fe39a}.pill.warn{color:#ffc857;border-color:#ffc857}.pill.bad{color:#ff7a7a;border-color:#ff7a7a}
+.banner-warn{background:#3a2a00;border:1px solid #ffc857;color:#ffe3a3;border-radius:10px;padding:12px 16px;margin-bottom:18px}
+.btn.sm{padding:6px 14px;font-size:15px;box-shadow:none}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px}.kv dt{color:var(--muted)}.kv dd{margin:0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.mono{font-family:ui-monospace,Menlo,monospace}
+.admin-page{padding:28px}

@@ -1,0 +1,182 @@
+
+<section class="hero"><canvas id="em" aria-hidden="true"></canvas><svg class="skull" viewBox="0 0 100 120" aria-hidden="true"><path d="M50 4C25 4 10 22 10 46c0 14 6 22 14 28v18h14v-8h6v8h12v-8h6v8h14V74c8-6 14-14 14-28C90 22 75 4 50 4Z" fill="#2f7bff"/><ellipse cx="34" cy="48" rx="10" ry="12" fill="#000"/><ellipse cx="66" cy="48" rx="10" ry="12" fill="#000"/><path d="M50 62l-6 14h12z" fill="#000"/></svg><svg class="yard" viewBox="0 0 1200 140" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><circle cx="980" cy="40" r="46" fill="#2f7bff" opacity=".22"/><circle cx="980" cy="40" r="28" fill="#bcd7ff" opacity=".22"/><g fill="#000"><path d="M0 140V108Q140 96 300 110T620 104T940 112T1200 100V140Z"/><path d="M90 114V80Q90 66 106 66Q122 66 122 80V112Z"/><path d="M420 108V84Q420 72 434 72Q448 72 448 84V108Z"/><path d="M780 112V76Q780 60 798 60Q816 60 816 76V112Z"/></g><g stroke="#000" fill="none"><path d="M250 112V66M236 78H264" stroke-width="7"/><path d="M1040 108V62M1026 74H1054" stroke-width="7"/><path d="M600 108V70M600 84L580 62M600 78L622 58M580 62L572 48M622 58L634 46" stroke-width="5"/></g></svg><svg class="scope" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#2f7bff" stroke-width="2.5"><circle cx="100" cy="100" r="92"/><circle class="ring" cx="100" cy="100" r="78" stroke="#6fd3ff" stroke-width="2" stroke-dasharray="3 9"/><path d="M8 100H84M116 100H192M100 8V84M100 116V192"/></g><g stroke="#6fd3ff" stroke-width="2"><path d="M60 96v8M140 96v8M96 60h8M96 140h8M30 96v8M170 96v8"/></g><circle cx="100" cy="100" r="2.6" fill="#6fd3ff"/><path d="M146 52l10 10M156 52l-10 10" stroke="#eaf1ff" stroke-width="2.5"><animate attributeName="opacity" values="1;0;1" dur="1.6s" repeatCount="indefinite"/></path></svg><svg class="chute c1" viewBox="0 0 60 90" aria-hidden="true"><path d="M4 30Q4 4 30 4T56 30Q44 24 30 30T4 30Z" fill="#2f7bff"/><path d="M4 30L28 70M30 30V70M56 30L32 70" stroke="#6fd3ff" stroke-width="1" fill="none"/><circle cx="30" cy="73" r="4" fill="#eaf1ff"/><path d="M30 77v10M30 80l-6 5M30 80l6 5" stroke="#eaf1ff" stroke-width="2.5" fill="none"/></svg><svg class="chute c2" viewBox="0 0 60 90" aria-hidden="true"><path d="M4 30Q4 4 30 4T56 30Q44 24 30 30T4 30Z" fill="#2f7bff"/><path d="M4 30L28 70M30 30V70M56 30L32 70" stroke="#6fd3ff" stroke-width="1" fill="none"/><circle cx="30" cy="73" r="4" fill="#eaf1ff"/><path d="M30 77v10M30 80l-6 5M30 80l6 5" stroke="#eaf1ff" stroke-width="2.5" fill="none"/></svg><div class="wrap">
+<h1 class="glitch" data-text="Squad up. Win the pot.">Squad up. Win the pot.</h1>
+<p>Free Fire aur BGMI custom room tournaments. Fixed time, fair play, payout 24 ghante ke andar.</p>
+<a class="btn" href="#register">Slot book karo</a> <a class="btn ghost" href="#rules">Rules padho</a> <a class="btn ghost tg" id="tg" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>Telegram join karo</a>
+
+<div class="match">
+<div>
+<small>Next match: <span id="g">Free Fire</span> <span id="gm">Squad</span></small>
+<div class="timer" id="t" aria-live="off"><div><b id="d">00</b><small>din</small></div><div><b id="h">00</b><small>ghante</small></div><div><b id="m">00</b><small>min</small></div><div><b id="s">00</b><small>sec</small></div></div>
+<p style="margin:14px 0 0;color:var(--muted)" id="when"></p>
+</div>
+<div>
+<small>Prize pool</small><div class="prize" id="pz">₹1,900</div>
+<small id="slotline" style="margin-top:12px">Slots: —</small>
+<div class="slots"><i></i></div>
+</div>
+</div>
+</div></section>
+
+<div class="tape" aria-hidden="true"><div><span>⚠ ZONE SHRINKING ⚠ SLOTS LIMITED ⚠ NO MERCY ⚠ WINNER TAKES THE POT ⚠ ZONE SHRINKING ⚠ SLOTS LIMITED ⚠ NO MERCY ⚠ WINNER TAKES THE POT ⚠ ZONE SHRINKING ⚠ SLOTS LIMITED ⚠ NO MERCY ⚠ WINNER TAKES THE POT </span><span>⚠ ZONE SHRINKING ⚠ SLOTS LIMITED ⚠ NO MERCY ⚠ WINNER TAKES THE POT ⚠ ZONE SHRINKING ⚠ SLOTS LIMITED ⚠ NO MERCY ⚠ WINNER TAKES THE POT ⚠ ZONE SHRINKING ⚠ SLOTS LIMITED ⚠ NO MERCY ⚠ WINNER TAKES THE POT </span></div></div>
+<section id="zone"><div class="wrap"><div class="zone">
+<svg class="map" viewBox="0 0 400 400" role="img" aria-label="Shrinking zone map"><defs><pattern id="gr" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#16305f" stroke-width="1"/></pattern><mask id="zm"><rect width="400" height="400" fill="#fff"/><circle cx="215" cy="190" r="175" fill="#000"><animate attributeName="r" values="175;95;50;175" dur="16s" repeatCount="indefinite"/></circle></mask></defs><rect width="400" height="400" fill="#050b18"/><rect width="400" height="400" fill="url(#gr)"/><g fill="#0c1a38" stroke="#16305f" stroke-width="2"><path d="M40 80Q90 40 150 70T190 140Q140 180 80 160T40 80Z"/><path d="M240 60Q310 40 350 100T330 190Q270 170 240 120Z"/><path d="M60 260Q120 230 180 270T170 350Q100 380 60 330Z"/><path d="M250 250Q320 230 360 290T320 360Q260 350 250 300Z"/></g><path d="M0 222Q100 190 200 230T400 200" stroke="#1a3d80" stroke-width="7" fill="none" opacity=".7"/><rect width="400" height="400" fill="#2f7bff" opacity=".3" mask="url(#zm)"/><circle cx="215" cy="190" r="175" fill="none" stroke="#6fd3ff" stroke-width="2.5"><animate attributeName="r" values="175;95;50;175" dur="16s" repeatCount="indefinite"/></circle><circle cx="230" cy="175" r="60" fill="none" stroke="#eaf1ff" stroke-width="1.5" stroke-dasharray="4 4" opacity=".7"/><path id="rt" d="M15 70L385 330" stroke="#8fa5cc" stroke-dasharray="6 6" fill="none"/><path d="M-9 -6L11 0L-9 6L-4 0Z" fill="#6fd3ff"><animateMotion dur="9s" repeatCount="indefinite"><mpath href="#rt"/></animateMotion></path><g fill="#eaf1ff"><circle cx="120" cy="110" r="3"><animate attributeName="opacity" values="1;.15;1" dur="2.2s" begin="0s" repeatCount="indefinite"/></circle><circle cx="190" cy="150" r="3"><animate attributeName="opacity" values="1;.15;1" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></circle><circle cx="260" cy="120" r="3"><animate attributeName="opacity" values="1;.15;1" dur="2.6s" begin="0.9s" repeatCount="indefinite"/></circle><circle cx="300" cy="210" r="3"><animate attributeName="opacity" values="1;.15;1" dur="2s" begin="0.2s" repeatCount="indefinite"/></circle><circle cx="220" cy="240" r="3"><animate attributeName="opacity" values="1;.15;1" dur="2.4s" begin="1.1s" repeatCount="indefinite"/></circle><circle cx="150" cy="290" r="3"><animate attributeName="opacity" values="1;.15;1" dur="1.9s" begin="0.6s" repeatCount="indefinite"/></circle><circle cx="90" cy="200" r="3"><animate attributeName="opacity" values="1;.15;1" dur="2.3s" begin="1.4s" repeatCount="indefinite"/></circle><circle cx="330" cy="300" r="3"><animate attributeName="opacity" values="1;.15;1" dur="2.1s" begin="0.3s" repeatCount="indefinite"/></circle><circle cx="250" cy="320" r="3"><animate attributeName="opacity" values="1;.15;1" dur="2.7s" begin="0.8s" repeatCount="indefinite"/></circle></g><text x="14" y="26" fill="#8fa5cc" font-size="14" font-family="Teko,sans-serif" letter-spacing="2">N</text><path d="M30 34V14" stroke="#8fa5cc" stroke-width="1.5"/></svg>
+<div>
+<h2>Aakhri circle tak pahuncho</h2>
+<p class="lead">Plane se kudo, loot uthao, zone se bachke nikalo. Jo squad aakhri circle mein khada rahega, sabse bada hissa wahi le jayega.</p>
+<div class="bars" aria-hidden="true"><div><small>HP</small><em><i style="width:100%"></i></em></div><div><small>ARMOR</small><em><i style="width:70%"></i></em></div></div>
+<div class="feed" aria-hidden="true"><small>Sample feed</small>
+<p><b>TEAM_VIPER</b><span>eliminated</span><em>TEAM_GHOST</em></p>
+<p><b>TEAM_RAVEN</b><span>eliminated</span><em>TEAM_ORCA</em></p>
+<p><b>TEAM_VIPER</b><span>eliminated</span><em>TEAM_RAVEN</em></p>
+</div>
+</div>
+</div></div></section>
+<section id="about"><div class="wrap">
+<h2>Kryvox kaun hai</h2>
+<p class="lead">Kryvox Free Fire aur BGMI players ke liye custom room tournaments chalata hai. Kaam simple hai: time pe room, saaf rules, aur jeetne walon ko time pe payout, proof ke saath.</p>
+<div class="grid">
+<div class="cell"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 8v8l5 4"/></svg><b>Fixed timing</b><small>Har match ka date aur time pehle se post hota hai. Room time pe khulta hai.</small></div>
+<div class="cell"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7z"/><path d="M11 16l4 4 7-8"/></svg><b>Fair play</b><small>Hack, teaming aur glitch abuse pe seedha permanent ban.</small></div>
+<div class="cell"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 5h14v6a7 7 0 0 1-14 0z"/><path d="M9 7H4v2a5 5 0 0 0 5 5M23 7h5v2a5 5 0 0 1-5 5M16 18v5M10 28h12M12 23h8"/></svg><b>Payout proof</b><small>Winners ko prize 24 ghante ke andar, screenshot Instagram pe.</small></div>
+<div class="cell"><svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 18v-3a11 11 0 0 1 22 0v3"/><rect x="3" y="17" width="6" height="9" rx="2"/><rect x="23" y="17" width="6" height="9" rx="2"/><path d="M26 26c0 3-4 4-8 4"/></svg><b>Seedha contact</b><small>Koi dikkat ho to Telegram pe admin se baat karo.</small></div>
+</div>
+</div></section>
+<section id="modes"><div class="wrap">
+<h2>Apna mode chuno</h2>
+<p class="lead">Akele ho to Solo, dost ke saath Duo, aur poori team ho to Squad. Fee aur slots mode ke hisaab se alag hote hain.</p>
+<div class="grid" id="modes-grid"></div>
+</div></section>
+<section id="details"><div class="wrap">
+<h2>Match details</h2>
+<div class="grid">
+<div class="cell"><small>Games</small><b>Free Fire, BGMI</b></div>
+<div class="cell"><small>Mode</small><b>Solo, Duo, Squad</b></div>
+<div class="cell"><small>Entry fee</small><b>Mode ke hisaab se</b></div>
+<div class="cell"><small>Matches</small><b>1 match</b></div>
+<div class="cell"><small>Room ID</small><b>Start se 15 min pehle</b></div>
+<div class="cell"><small>Prize</small><b>Top 3 + Most Kills bonus</b></div>
+</div>
+<div class="split" id="split"></div>
+</div></section>
+
+<section id="schedule"><div class="wrap">
+<h2>Upcoming matches</h2>
+<div class="chips" id="chips" role="group" aria-label="Filter"></div>
+<div class="sched" id="sched"></div>
+</div></section>
+<section><div class="wrap">
+<h2>Register kaise karein</h2>
+<ol class="steps">
+<li>Slot book karo button dabao.</li>
+<li>Online entry fee pay karo.</li>
+<li>Team ka naam, UID aur Telegram username bharo.</li>
+<li>Hum payment verify karenge, uske baad slot confirm hoga.</li>
+<li>Match se 15 min pehle room ID aur password group mein aayega.</li>
+</ol>
+</div></section>
+
+<section id="register"><div class="wrap">
+<h2>Slot book karo</h2>
+<div class="pay" style="grid-template-columns:1fr"><div>
+<b id="feeline" style="font-size:24px">Entry fee: mode ke hisaab se</b>
+<p style="color:var(--muted);margin:6px 0 18px">Button dabao, entry fee pay karo aur registration poora karo. Payment verify hote hi slot confirm hoga.</p>
+<div class="acts" id="regbtns"></div>
+<p class="alert"><b>Scam se bacho:</b> Payment sirf is button se karo. Koi DM ya message mein apna UPI ID ya QR bheje to mat bhejo. Admin kabhi OTP, PIN ya card details nahi maangta. Shak ho to Telegram pe admin se confirm karo.</p>
+</div></div>
+</div></section>
+
+<section id="winners"><div class="wrap">
+<ol class="flow"><li><b>Match khatam</b><small>Result screen ke screenshots lo</small></li><li><b>30 min dispute window</b><small>Shikayat ho to admin ko bhejo</small></li><li><b>Result final</b><small>Result aur winners announce</small></li><li><b>Payout</b><small>24 ghante ke andar, proof Instagram pe</small></li></ol>
+<h2 style="margin-top:36px">Winners aur payout proof</h2>
+<div class="rgrid" id="wlist"></div>
+<h2 style="margin-top:44px">Leaderboard</h2>
+<div id="lb"></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+<h2>Rules</h2>
+<p class="lead">Registration karne ka matlab hai ki tumne ye saare rules maan liye hain.</p>
+<div class="rgrid">
+<div class="rcard"><h3>Registration aur payment</h3><ul>
+<li>Registration sirf successful payment ke baad valid hai.</li>
+<li>Ek payment sirf ek squad ke liye chalega.</li>
+<li>Slots limited hain, pehle aao pehle pao.</li>
+<li>Form mein UID aur naam sahi likho. Galat detail pe slot cancel ho sakta hai.</li></ul></div>
+<div class="rcard"><h3>Match se pehle</h3><ul>
+<li>Room ID aur password match se 15 min pehle Telegram group mein milega.</li>
+<li>Sirf registered players hi khelenge. Player badalna ho to match se pehle admin ko batao.</li>
+<li>Late join pe refund ya re-entry nahi.</li>
+<li>Room details kisi ko share mat karo.</li>
+<li>Solo mein sirf registered player hi khelega. Account share ya kisi aur se khelwana allowed nahi.</li></ul></div>
+<div class="rcard"><h3>Fair play aur ban</h3><ul>
+<li>Hack, third-party tools ya emulator (jahan allowed nahi) pe permanent ban.</li>
+<li>Teaming, glitch abuse aur stream sniping allowed nahi.</li>
+<li>Gaali-galoch ya abusive behaviour pe disqualification.</li>
+<li>Ban hone pe entry fee wapas nahi milegi.</li></ul></div>
+<div class="rcard"><h3>Result aur payout</h3><ul>
+<li>Match ke result ke screenshots apne paas rakho.</li>
+<li>Koi dispute ho to match khatam hone ke 30 min ke andar screenshot ya video bhejo.</li>
+<li>Winner ka faisla match ke final result se hoga. Scoring ki detail tournament poster pe di jayegi.</li>
+<li>Admin ka decision final hoga.</li>
+<li>Most Kills bonus: match mein sabse zyada kills karne wale team (Solo mein player) ko milega, screenshot proof ke saath. Kills barabar hone pe behtar placement wale ko bonus milega, placement bhi barabar ho to bonus barabar baant diya jayega. Bonus top 3 ke prize ke alawa hai.</li>
+<li>Prize top 3 teams ko milega (1st, 2nd, 3rd). Mode ke hisaab se amount Match details mein dekho. Payout 24 ghante ke andar winners ke UPI pe, proof Instagram pe.</li>
+<li>Hamari taraf se match cancel hone pe refund ya agle match mein shift. Slots poore na bharne par bhi match cancel ho sakta hai.</li></ul></div>
+</div>
+
+</div></section>
+
+<section id="faq"><div class="wrap">
+<h2>FAQ</h2>
+<div class="faq">
+<details><summary>Payment ke baad slot kab confirm hoga?</summary><p>Payment verify hote hi slot confirm hota hai aur tumhe Telegram group mein add kar diya jata hai.</p></details>
+<details><summary>Payment kat gaya par slot confirm nahi hua?</summary><p>Payment ka screenshot aur transaction ID Telegram pe bhej do. Hum check karenge.</p></details>
+<details><summary>Kya refund milega?</summary><p>Sirf tab jab match hamari taraf se cancel ho. Us case mein refund ya agle match mein slot shift milega. Late join ya ban pe refund nahi hota.</p></details>
+<details><summary>Most Kills bonus kaise milta hai?</summary><p>Jis team ke match mein sabse zyada kills hote hain use Mode ke hisaab se alag bonus milta hai (amount Match details mein dekho). Kills barabar hone pe behtar placement wale ko milta hai. Result screen ka screenshot sambhal ke rakho. Bonus ka payout bhi 24 ghante ke andar hota hai.</p></details>
+<details><summary>Room ID kab aur kahan milega?</summary><p>Match se 15 minute pehle Telegram group mein. Sirf verified squads ko group mein add kiya jata hai.</p></details>
+<details><summary>Squad mein 4 se kam players ho to?</summary><p>Squad ke liye pure 4 players chahiye. Kam players ho to Duo (2 players) ya Solo (akele) match mein register karo.</p></details>
+<details><summary>Solo match mein kya alag hai?</summary><p>Solo mein har player akela khelta hai aur uska apna score banta hai. Entry fee aur slots mode ke hisaab se alag hote hain, Modes section dekho.</p></details>
+<details><summary>Kya koi bhi khel sakta hai?</summary><p>Paid matches mein sirf 18 saal ya usse upar ke players khel sakte hain.</p></details>
+<details><summary>Prize kab milta hai?</summary><p>Result confirm hone ke 24 ghante ke andar winners ke UPI pe. Payout ka screenshot Instagram page pe post hota hai.</p></details>
+<details><summary>UID kaise dekhein?</summary><p>Free Fire mein game kholo aur apne profile/avatar pe tap karo, naam ke paas UID dikhega. BGMI mein profile pe tap karo, wahan Character ID dikhega. Game ke version ke hisaab se jagah thodi alag ho sakti hai. UID ko copy karke registration mein paste karo.</p></details>
+<details><summary>Custom room kaise join karein?</summary><p>Game kholo, Custom Room ya Room wale option mein jao, Join pe tap karo, aur Telegram group mein mila Room ID aur password daalo. Room details match se thodi der pehle hi aati hain.</p></details>
+<details><summary>Result screenshot kaise lein?</summary><p>Match khatam hone pe result ya ranking screen ka screenshot lo, jisme team ka naam, placement aur kills dikhein. Dispute ho to 30 minute ke andar admin ko Telegram pe bhejo.</p></details>
+<details><summary>Kisi pe cheating ka shak ho to?</summary><p>Match khatam hone ke 30 minute ke andar screenshot ya video ke saath admin ko Telegram pe message karo. Check karke action liya jayega.</p></details>
+</div>
+</div></section>
+<section id="soon"><div class="wrap">
+<h2>Many more coming soon</h2>
+<p class="lead">Kryvox Arena abhi shuruaat mein hai. Ye sab cheezein aage aane wali hain.</p>
+<div class="grid soon">
+<div class="cell"><span class="tag">Coming soon</span><b>Live leaderboard</b><small>Match ke turant baad ranking aur results.</small></div>
+<div class="cell"><span class="tag">Coming soon</span><b>Team profiles</b><small>Apni team ka naam, record aur history.</small></div>
+<div class="cell"><span class="tag">Coming soon</span><b>Weekly tournaments</b><small>Har hafte naye matches aur bade prize pools.</small></div>
+<div class="cell"><span class="tag">Coming soon</span><b>Aur games</b><small>Free Fire aur BGMI ke baad aur bhi games.</small></div>
+<div class="cell"><span class="tag">Coming soon</span><b>Live streaming</b><small>Matches ka live dekhne ka option.</small></div>
+<div class="cell"><span class="tag">Coming soon</span><b>Rewards</b><small>Regular players ke liye special inaam.</small></div>
+</div>
+<p style="margin-top:22px"><a class="btn tg" id="tg3" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>Updates ke liye Telegram join karo</a></p>
+</div></section>
+
+<section id="community"><div class="wrap">
+<h2>Community se judo</h2>
+<p class="lead">Room ID, results aur announcements sabse pehle yahan aate hain. Koi dikkat ho to admin se seedha baat karo.</p>
+<div class="soc">
+<a id="s-ig" href="#" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><b>Instagram</b><small id="s-igl">@yourhandle</small></a>
+<a id="s-tg" href="#" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg><b>Telegram</b><small>Channel join karo</small></a>
+<a id="s-adm" href="#" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><b>Admin se baat karo</b><small>Telegram pe message karo</small></a>
+<a id="s-rep" href="#" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4h11l-2 4 2 4H5"/></svg><b>Player report karo</b><small>Cheating ka proof admin ko bhejo</small></a>
+<a id="s-spo" href="#" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3l-5.5 2.9 1-6.2L3 9.6l6.2-.9z"/></svg><b>Sponsor bano</b><small>Prize pool ya brand ke saath judo</small></a>
+<a id="s-share" href="#" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg><b>Dosto ko bhejo</b><small>Telegram pe share karo</small></a>
+</div>
+</div></section>
+
+<section id="terms"><div class="wrap">
+<h2>Terms, refund aur privacy</h2>
+<div class="faq">
+<details><summary>Terms of service</summary><p>Kryvox Arena mein registration karke tum in terms ko maante ho. Tournament Rules section aur poster ke hisaab se chalega, aur admin ka decision final hoga. Rules todne par ban ya disqualification ho sakta hai. Paid matches sirf 18+ players ke liye hain. Match ki date, time ya format badalna pade to players ko Telegram pe pehle bataya jayega.</p></details>
+<details><summary>Refund policy</summary><p>Entry fee sirf tab wapas hogi jab match hamari taraf se cancel ho, ya payment hone ke baad bhi technical wajah se slot confirm na ho paye. Refund original payment method pe 7 working days ke andar aayega. Late join, no-show, ban ya disqualification pe refund nahi milega.</p></details>
+<details><summary>Privacy policy</summary><p>Hum registration ke liye team ka naam, in-game naam aur UID, Telegram username aur payment ki confirmation lete hain. Ye sirf slot confirm karne, match chalane aur payout dene ke liye use hota hai, aur hum ise kisi ko bechte nahi. Card ya UPI ki details hamare paas save nahi hoti, wo payment gateway sambhalta hai. Apna data hatwane ke liye admin ko Telegram pe message karo.</p></details>
+<details><summary>Disclaimer</summary><p>Kryvox Arena Garena (Free Fire) ya Krafton (BGMI) se jura hua ya unka endorsed nahi hai. Game ke naam aur logo unke owners ke hain. Paid contests ke legal rules alag states mein alag ho sakte hain, isliye participate karne se pehle apne state ke rules check kar lo.</p></details>
+</div>
+</div></section>
