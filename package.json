@@ -6,7 +6,7 @@
   "engines": { "node": ">=18" },
   "scripts": {
     "start": "node server.js",
-    "test": "node --test tests/otp.test.ts tests/payments.test.ts tests/templates.test.ts",
+    "test": "node --test tests/crypto.test.ts tests/payments.test.ts tests/templates.test.ts",
     "db:start": "supabase start",
     "db:reset": "supabase db reset",
     "functions:serve": "supabase functions serve --env-file supabase/.env.secrets --no-verify-jwt",

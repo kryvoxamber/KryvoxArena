@@ -17,11 +17,11 @@ npm run dev:all
 Ye khud: local Supabase start karta hai (migrations 0001–0006 apne aap lagti hain), `.env` banata hai, Edge Functions serve karta hai aur website chalata hai.
 - Website: http://localhost:3000
 - Database UI (Studio): http://127.0.0.1:54323
-- Local email inbox (OTP yahin dikhega): http://127.0.0.1:54324
+- Local email inbox (confirmation/reset mails): http://127.0.0.1:54324
 - Pehla admin: Studio → SQL editor:
   `insert into admin_roles (user_id, role) select id, 'SUPER_ADMIN' from profiles where email = 'you@example.com';`
 
-Email OTP local mein Inbucket inbox mein aata hai. Google login ke liye `GOOGLE_CLIENT_ID/SECRET` env set karo (ya email OTP se login karo).
+Login email + password se hota hai (local mein confirm-email off hai). Google login ke liye `GOOGLE_CLIENT_ID/SECRET` env set karo.
 
 ## Cloud Supabase ke saath local website
 `.env.example` ko `.env` copy karo, sirf `SUPABASE_URL` aur `SUPABASE_ANON_KEY` bharo, phir `npm start`.

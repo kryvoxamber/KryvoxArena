@@ -26,7 +26,7 @@ export async function guard(kind) {
   if (!s) return { ok: false, redirect: kind === "admin" ? "/admin/login" : "/login?next=" + encodeURIComponent(location.pathname) };
   if (kind === "admin") return (await myRoles()).length ? { ok: true } : { ok: false, redirect: "/admin/login?denied=1" };
   const p = await myProfile();
-  if (!p || !p.email_verified) return { ok: false, redirect: "/login?verify=1" };
+  if (!p || p.status !== "ACTIVE") return { ok: false, redirect: "/login" };
   if (!p.profile_completed && location.pathname !== "/profile/setup") return { ok: false, redirect: "/profile/setup" };
   return { ok: true };
 }
@@ -38,6 +38,7 @@ export async function refreshHeader() {
   box.replaceChildren();
   const a = (href, text, cls) => { const n = document.createElement("a"); n.href = href; n.textContent = text; n.className = cls; n.setAttribute("data-link", ""); return n; };
   if (s) {
+    if ((await myRoles()).length) box.append(a("/admin", "Admin", "btn ghost"));
     box.append(a("/dashboard", "Dashboard", "btn ghost"));
     const out = document.createElement("button"); out.className = "btn"; out.textContent = "Logout"; out.onclick = signOut; box.append(out);
   } else { box.append(a("/login", "Login", "btn ghost"), a("/tournaments", "Register now", "btn")); }

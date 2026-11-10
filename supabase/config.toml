@@ -22,8 +22,8 @@ enable_signup = true
 
 [auth.email]
 enable_signup = true
-double_confirm_changes = true
-enable_confirmations = true
+double_confirm_changes = false
+enable_confirmations = false
 
 [auth.external.google]
 enabled = true
@@ -34,7 +34,7 @@ secret = "env(GOOGLE_CLIENT_SECRET)"
 enabled = true
 file_size_limit = "5MiB"
 
-# Edge Functions are added in later stages (payments, email, OTP). JWT verification stays ON by default;
+# Edge Functions are added in later stages (payments, email). JWT verification stays ON by default;
 # only webhook endpoints (signature-verified inside the function) will set verify_jwt = false.
 
 # Webhooks are called by PhonePe / Razorpay without a Supabase JWT; they authenticate by signature/shared secret inside the function.

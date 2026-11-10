@@ -16,8 +16,8 @@ Repo → Settings → Secrets and variables → Actions → New secret:
 | `SUPABASE_PROJECT_REF` | Reference ID |
 | `SUPABASE_DB_PASSWORD` | project banate waqt ka password |
 | `SITE_URL` | `https://tumhara-site.vercel.app` |
-| `OTP_PEPPER`, `CRON_SECRET` | koi bhi lamba random string (`openssl rand -hex 32`) |
-| `RESEND_API_KEY`, `EMAIL_FROM` | resend.com (domain verify karo) — bina iske OTP email nahi jayega |
+| `CRON_SECRET` | koi bhi lamba random string (`openssl rand -hex 32`) |
+| `RESEND_API_KEY`, `EMAIL_FROM` | resend.com (domain verify karo) — sirf tournament/room emails ke liye; login ke liye zaroori nahi |
 Payment secrets (PhonePe/Razorpay) tabhi daalo jab paid entry chalu karni ho (DEPLOY.md step 6).
 
 Secrets daalne ke baad Actions tab → **Deploy Supabase** → *Run workflow*. Ye khud: migrations lagata hai, secrets set karta hai, saare Edge Functions deploy karta hai. Uske baad har push par (supabase/ folder badalne par) auto-deploy.

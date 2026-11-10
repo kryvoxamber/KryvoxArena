@@ -12,7 +12,7 @@ export async function mount(root, { route }) {
   const f = (k, label, type = "text", extra = {}) => el("label", {}, label, el("input", { name: k, type, value: p[k] || "", ...extra }));
   const form = el("form", { class: "form card" },
     f("full_name", "Full name", "text", { required: true, maxlength: 80 }),
-    el("label", {}, "Email (verified)", el("input", { value: p.email || s.user.email, disabled: true })),
+    el("label", {}, "Email", el("input", { value: p.email || s.user.email, disabled: true })),
     f("phone", "Phone (+91…)", "tel", { required: true, pattern: "\\+?[0-9]{8,15}", placeholder: "+919876543210" }),
     f("country", "Country", "text", { required: true }), f("state", "State", "text", { required: true }), f("city", "City"),
     el("label", {}, "Profile picture", el("input", { name: "avatar", type: "file", accept: "image/png,image/jpeg,image/webp" }),

@@ -13,9 +13,9 @@ Free Fire & BGMI tournament platform. Static frontend (vanilla JS modules, no bu
 All 22 stages are implemented in code. See `DEPLOY.md` for setup and `TESTING.md` for exactly what was and was not verified.
 
 - `supabase/migrations/0001-0006` – schema, payments model + compliance gate, atomic booking and payment RPCs, RLS, storage, audited admin functions.
-- `supabase/functions/*` – Edge Functions (OTP, payments, webhooks, reconcile, manual UPI, email queue). `_shared/` holds pure, unit-tested logic.
+- `supabase/functions/*` – Edge Functions (payments, webhooks, reconcile, manual UPI, email queue). `_shared/` holds pure, unit-tested logic.
 - `assets/js/pages/*` – player pages; `assets/js/pages/admin/*` – staff panel.
-- `tests/*.test.ts` – unit tests (`node --test tests/otp.test.ts tests/payments.test.ts tests/templates.test.ts`).
+- `tests/*.test.ts` – unit tests (`node --test tests/crypto.test.ts tests/payments.test.ts tests/templates.test.ts`).
 
 ## Run locally (see LOCAL.md)
 `npm start` → http://localhost:3000 · `npm run dev:all` = website + local Supabase + functions.

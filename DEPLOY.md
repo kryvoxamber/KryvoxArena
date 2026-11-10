@@ -6,18 +6,18 @@ Paid entry is **OFF** and stays off until you approve compliance in Admin → Pa
 
 ## 1. Supabase project
 1. Create a project at supabase.com. Copy **Project URL** and **anon key** into `assets/js/config.js`.
-2. Install the Supabase CLI, then: `supabase link --project-ref <ref>` and `supabase db push` (applies `supabase/migrations/0001…0006`).
+2. Install the Supabase CLI, then: `supabase link --project-ref <ref>` and `supabase db push` (applies `supabase/migrations/0001…0008`).
 3. **Auth → Providers → Google**: create an OAuth client in Google Cloud Console (type *Web*). Authorised redirect URI = `https://<ref>.supabase.co/auth/v1/callback`. Paste client ID/secret into Supabase.
 4. **Auth → URL Configuration**: Site URL = your domain; add `https://your-domain.com/login` to Redirect URLs.
 5. **Auth → Email Templates → Magic Link**: make the body show the code: `Your code: {{ .Token }}` (the login screen asks for the 6-digit code).
 6. **Auth → SMTP**: use Resend SMTP (host `smtp.resend.com`, user `resend`, password = API key) so Supabase's own mails also come from your domain.
-7. Auth → Providers → Email: keep *Confirm email* on; OTP length 6.
+7. Auth → Providers → Email: login email+password hai. *Confirm email* off rakho (seedha login) ya on (user ko confirmation link milega).
 
 ## 2. Edge Functions + secrets
 ```
 cp .env.example supabase/.env.secrets   # fill in values (this file is git-ignored)
 supabase secrets set --env-file supabase/.env.secrets
-supabase functions deploy otp-send otp-verify mark-verified payment-create payment-verify \
+supabase functions deploy payment-create payment-verify \
   manual-upi-submit razorpay-webhook phonepe-webhook payment-reconcile email-worker email-enqueue
 ```
 `verify_jwt = false` for the two webhooks and the two cron functions is set in `supabase/config.toml`; they authenticate by signature / `x-cron-secret` inside the function.

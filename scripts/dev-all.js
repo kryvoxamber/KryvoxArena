@@ -8,7 +8,7 @@ const status = JSON.parse(execSync("supabase status -o json", { cwd: root }).toS
 const env = `SUPABASE_URL=${status.API_URL}\nSUPABASE_ANON_KEY=${status.ANON_KEY}\n`;
 if (!fs.existsSync(path.join(root, ".env"))) { fs.writeFileSync(path.join(root, ".env"), env); console.log("Wrote .env with local Supabase URL/key"); }
 const secrets = path.join(root, "supabase", ".env.secrets");
-if (!fs.existsSync(secrets)) fs.writeFileSync(secrets, `SITE_URL=http://localhost:3000\nOTP_PEPPER=local-dev-pepper-change-me-0123456789\nCRON_SECRET=local-cron-secret\n# RESEND_API_KEY=\n# EMAIL_FROM=\n`);
+if (!fs.existsSync(secrets)) fs.writeFileSync(secrets, `SITE_URL=http://localhost:3000\nCRON_SECRET=local-cron-secret\n# RESEND_API_KEY=\n# EMAIL_FROM=\n`);
 spawn("supabase", ["functions", "serve", "--env-file", "supabase/.env.secrets", "--no-verify-jwt"], { cwd: root, stdio: "inherit" });
 spawn(process.execPath, ["server.js"], { cwd: root, stdio: "inherit" });
 console.log("Local Supabase Studio: " + status.STUDIO_URL + "  |  Local emails (Inbucket): " + (status.INBUCKET_URL || "http://127.0.0.1:54324"));
